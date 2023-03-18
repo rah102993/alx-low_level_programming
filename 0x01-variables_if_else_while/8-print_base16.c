@@ -8,7 +8,8 @@
 int main(void)
 {
 	char low;
-	for (low = '0'; low >= 'f'; low++)
+
+	for (low = '0'; low <= 'f'; low++)
 	{
 		putchar(low);
 	};
