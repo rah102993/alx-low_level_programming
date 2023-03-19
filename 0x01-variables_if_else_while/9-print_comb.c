@@ -9,20 +9,18 @@
 
 int main(void)
 {
-	int a;
+	int i;
 
-	for (a = 48; a < 58; a++)
+	for (i = 48; i < 58; i++)
 	{
-		if  (a != '9')
-		{
-			putchar (a);
-			putchar (',');
-		}
-		if (a == '9')
-		{
-			putchar (a);
-		}
-		putchar (' ');
+		putchar(i);
 	}
+	if (i != 57)
+	{
+		putchar(',');
+		putchar(' ');
+	}
+	putchar('\n');
+
 	return (0);
 }
