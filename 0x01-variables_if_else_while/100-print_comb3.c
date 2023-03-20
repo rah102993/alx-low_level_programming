@@ -1,39 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - Print combinations of 3
+ * main - Print combinations of 2
  *
  * Description: Separated by commas
  * Return: Always (0) Success
- *
  */
 
 int main(void)
 {
-	int i, j;
+	int digit1, digit2;
 
-	for (i = 48; i < 57; i++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		for (j = 48; j < 58; j++)
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
-			if (i == j)
-			{
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
+
+			if (digit1 == 8 && digit2 == 9)
 				continue;
-			}
-			putchar(i);
-			putchar(j);
-			if (i == '8' && j == '9')
-			{
-				break;
-				break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
 	putchar('\n');
 
 	return (0);
