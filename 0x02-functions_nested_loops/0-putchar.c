@@ -1,8 +1,8 @@
-#include "_putchar.c"
+#include "main.h"
+
 /**
  * main - a program that prints _putchar followed by a new line.
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: On success (0).
  */
 int main(void)
 {
