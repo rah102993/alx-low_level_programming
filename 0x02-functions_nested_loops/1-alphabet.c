@@ -6,7 +6,7 @@
  * Return: Always Succesful 0;
  *
  */
-int alphabet(void)
+int print_alphabet(void)
 {
 	int a;
 	for (a = 'a'; a <= 'z'; a++)
