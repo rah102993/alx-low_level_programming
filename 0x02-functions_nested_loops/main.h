@@ -9,6 +9,9 @@ extern int _isalpha(int c);
 extern int print_sign(int a);
 extern int _abs(int c);
 extern int print_last_digit(int i);
-
+extern void jack_bawer(void);
+extern void times_table(void);
+extern int add(int a, int b);
+extern int print_to_98(int a);
 
 #endif
