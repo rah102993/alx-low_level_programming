@@ -8,5 +8,7 @@ extern int _islower(int c);
 extern int _isalpha(int c);
 extern int print_sign(int a);
 extern int _abs(int c);
+extern int print_last_digit(int i);
+
 
 #endif
