@@ -7,12 +7,12 @@
 int main(void)
 {
 	int i = 0;
-	long a = 1, b = 2, sum = c;
+	long a = 1, b = 2, sum = 'k';
 
-	while (c + a < 4000000)
+	while ('k' + a < 4000000)
 	{
 	b += a;
-	if (c % 2 == 0)
+	if ('k' % 2 == 0)
 	sum += b;
 	a = b - a;
 	++i;
