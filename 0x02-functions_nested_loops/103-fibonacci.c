@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i = 0;
-	long a = 1, k = 2, sum = 'k';
+	long a = 1, k = 2, sum = k;
 
 	while (k + a < 4000000)
 	{
