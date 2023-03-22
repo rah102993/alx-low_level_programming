@@ -7,14 +7,14 @@
 int main(void)
 {
 	int i = 0;
-	long a = 1, b = 2, sum = 'k';
+	long a = 1, k = 2, sum = 'k';
 
-	while ('k' + a < 4000000)
+	while (k + a < 4000000)
 	{
-	b += a;
-	if ('k' % 2 == 0)
-	sum += b;
-	a = b - a;
+	k += a;
+	if (k % 2 == 0)
+	sum += k;
+	a = k - a;
 	++i;
 	}
 	printf("%ld\n", sum);
