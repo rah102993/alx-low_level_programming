@@ -12,6 +12,8 @@ int main(void)
 	while (b < 50)
 	{
 	if (b == 0)
+	printf("%ld", c);
+	else if (b == 1)
 	printf(", %ld", f);
 	else
 	{
