@@ -2,7 +2,6 @@
 
 /**
 * debug - tests function that prints if integer is positive or negative
-* @a: integer input from main
 * Return: 0 if Zero
 */
 
