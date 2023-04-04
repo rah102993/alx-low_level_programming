@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _memset - fill a block of memory with a specific value
- * @s: starting address of memory to be filled
- * @b: the desired value
- * @n: number of bytes to be changed
+ *_memset - A function that fills memory with a constant byte.
+ *@s: pointer to the array location
+ *@b: value to be entered
+ *@n: size of the array
  *
  * Return: changed array with new value for n bytes
  */
