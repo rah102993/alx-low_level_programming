@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-int _puts(const char *str)
+int _puts(const char *string)
 {
         int i = 0;
         while(string[i])  //standard c idiom for looping through a null-terminated string
