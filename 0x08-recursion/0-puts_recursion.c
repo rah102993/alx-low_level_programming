@@ -1,10 +1,10 @@
 #include "main.h"
+#include <stdio.h>
 
-/**
 int _puts(const char *string)
 {
         int i = 0;
-        while(string[i])/
+        while(string[i])
         {
                 if(putchar(string[i]) == EOF)
                 {
@@ -18,7 +18,7 @@ int _puts(const char *string)
         }
         return 1;
 }
-*/
+
 void _puts_recursion(char *s)
 {
 	_puts(s);
