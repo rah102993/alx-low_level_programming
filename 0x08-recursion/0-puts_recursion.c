@@ -1,24 +1,24 @@
 #include "main.h"
 
-
+/**
 int _puts(const char *string)
 {
         int i = 0;
-        while(string[i])  /*standard c idiom for looping through a null-terminated string*/
+        while(string[i])/
         {
-                if(putchar(string[i]) == EOF)  /*if we got the EOF value from writing the char*/
+                if(putchar(string[i]) == EOF)
                 {
                         return EOF;
                 }
                 i++;
         }
-        if(putchar('\n') == EOF)  /*this will occur right after we quit due to the null terminated character.*/
+        if(putchar('\n') == EOF)
         {
                 return EOF;
         }
-        return 1; /*to meet spec.*/
+        return 1;
 }
-
+*/
 void _puts_recursion(char *s)
 {
 	_puts(s);
