@@ -17,6 +17,10 @@ void _print_rev_recursion(char *s)
 		_print_rev_recursion(rev);
 		_putchar('\n');
 	}
+	else if (*rev == '\0')
+	{
+		return;
+	}
 	else
 	{
 		return;
