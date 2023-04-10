@@ -35,7 +35,6 @@ int _multiply(char *s)
 			}
 			c = c * 10 + f;
 			e = 1;
-			
 			if (s[a + 1] < '0' || s[a + 1] > '9')
 			{
 				break;
