@@ -49,3 +49,34 @@ int _multiply(char *s)
 	}
 	return (c);
 }
+
+/**
+ * main - a program that multiplies two numbers.
+ * @argc: number of command-line arguments passed.
+ * @argv: argument array.
+ * Return: 0 or 1.
+ */
+
+int main(int argc, char *argv[])
+{
+	int result, num, num1;
+
+	if (argc < 3 || argc > 3)
+	{
+		printf("Error");
+
+		printf("\n");
+
+		return (1);
+	}
+
+	num = _multiply(argv[1]);
+	num1 = _multiply(argv[2]);
+	result = num * num1;
+
+	printf("%d", result);
+
+	printf("\n");
+
+	return (0);
+}
