@@ -57,6 +57,12 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+/**
+ * _multiply - a program that multiplies two numbers.
+ * @s: string.
+ * Return: Always 0 (Success).
+ */
+
 int _multiply(char *s)
 {
 	int a = 0;
