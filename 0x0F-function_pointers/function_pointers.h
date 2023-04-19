@@ -1,5 +1,5 @@
-#ifndef HEADER_FILE_NAME
-#define HEADER_FILE_NAME
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
 
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
