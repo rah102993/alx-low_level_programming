@@ -3,52 +3,86 @@
 #include <stdio.h>
 #include "lists.h"
 
+size_t looped_listint_len(const listint_t *head);
+size_t print_listint_safe(const listint_t *head);
+
 /**
- * print_listint_safe - a function that prints a listint_t linked list.
+ * looped_listint_len - a function that Counts the number of unique nodes
+ * in a looped listint_t linked list.
  * @head: a pointer to the head of listint_t.
  *
- * Return: the number of nodes in the list.
+ * Return: -0 if the list is not looped, or the number of nodes in the list.
+ */
+size_t looped_listint_len(const listint_t *head)
+{
+	const listint_t *a, *b;
+	size_t nodes = 1;
+
+		if (head == NULL || head->next == NULL)
+		return (0);
+
+	a = head->next;
+	b = (head->next)->next;
+
+	while (b)
+	{
+		if (a == b)
+		{
+			a = b;
+			while (a != b)
+			{
+				nodes++;
+				a = a->next;
+				b = b->next;
+			}
+
+			a = a->next;
+			while (a != b)
+			{
+				nodes++;
+				a = a->next;
+			}
+
+			return (nodes);
+		}
+
+		a = a->next;
+		b = (b->next)->next;
+	}
+
+	return (0);
+}
+
+/**
+ * print_listint_safe - a function that prints a listint_t linked list.
+ * @head: a pointer to the head of the listint_t list.
+ * Return: The number of nodes in the list.
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *current = head, *loop = head;
-	size_t count = 0;
+	size_t nodes, index = 0;
 
-	while (current != NULL)
+	nodes = looped_listint_len(head);
+
+	if (nodes == 0)
 	{
-		printf("[%p] %d\n", (void *)current, current->n);
-		count++;
-
-		if (current > current->next || current > loop)
+		for (; head != NULL; nodes++)
 		{
-			printf("-> [%p] %d\n", (void *)current->next, current->next->n);
-			break;
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
 		}
-
-		current = current->next;
-
-		if (current == loop)
-		{
-			printf("[%p] %d\n", (void *)current, current->n);
-			break;
-		}
-
-		if (current == NULL)
-			break;
-
-		if (loop->next == NULL || loop->next->next == NULL)
-			break;
-
-		loop = loop->next->next;
 	}
 
-	if (current == NULL)
+	else
 	{
-		printf("[NULL]\n");
-		return (count);
+		for (index = 0; index < nodes; index++)
+		{
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
+		}
+
+		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
 
-	printf("-> [%p] %d\n", (void *)current->next, current->next->n);
-
-	return (count);
+	return (nodes);
 }
