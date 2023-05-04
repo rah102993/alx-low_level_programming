@@ -7,17 +7,22 @@
  */
 void print_binary(unsigned long int n)
 {
-	int a;
-	unsigned long int m = 1UL << ((sizeof(unsigned long int) * 8) - 1);
+	unsigned long int m;
+	int a, count = 0;
 
-	for (a = 0; a < sizeof(unsigned long int) * 8; a++)
+	for (a = 63; a >= 0; a--)
 	{
-		if (n & m)
-			putchar('1');
-		else
-			putchar('0');
+		m = n >> a;
 
-		m = m >> 1;
+		if (m & 1)
+		{
+			_putchar('1');
+			count++;
+		}
+		else if (count)
+			_putchar('0');
 	}
-	putchar('\n');
+	if (!count)
+		_putchar('0');
 }
+
